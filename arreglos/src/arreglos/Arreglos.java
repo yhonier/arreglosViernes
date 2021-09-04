@@ -27,20 +27,34 @@ public class Arreglos {
         
         Scanner entrada= new Scanner(System.in);
         
-        int [] numeros= new  int[4];
+        Persona [] personas= new  Persona[4];
         
       
+       
         
-        System.out.println(numeros.length);
-        
-        
-        for(int i=0;i<numeros.length;i++){
-        
-            System.out.print("digita el dato "+i+": ");
+        for(int i=0;i<personas.length;i++){
             
-            numeros[i]= entrada.nextInt();
+            personas[i]= new Persona();
+            
+            System.out.print("Digita el nombre de la persona " +(i+1)+": ");
+        
+          personas[i].setNombre(entrada.next());
+            
         
         }
+        
+        System.out.println("\n"+"************");
+           for(int i=0;i<personas.length;i++){
+            
+               System.out.println(personas[i].getNombre());
+            
+            
+            
+        
+        }
+        
+        
+        
         
         
         // TODO code application logic here
